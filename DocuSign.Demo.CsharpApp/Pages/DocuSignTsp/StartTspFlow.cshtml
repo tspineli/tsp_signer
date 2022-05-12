@@ -1,0 +1,16 @@
+﻿@page
+@model DocuSign.Demo.CsharpApp.Pages.DocuSignTsp.StartTspFlowModel
+@{
+}
+
+<h1>StartTSP Flow</h1>
+
+Based on https://developers.docusign.com/id-tsp-api
+
+<h3>/oauth/token response generated from the Code</h3>
+AccessCode: @Model.SignatureOAuthUserToken.access_token
+UserApi: @Model.SignatureOAuthUserToken.user_api
+ExpireIn: @Model.SignatureOAuthUserToken.expires_in
+
+<h3>/signature/UserInfo API Call</h3>
+@ViewData["UserInfo"]
